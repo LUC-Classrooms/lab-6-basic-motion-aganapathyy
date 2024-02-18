@@ -23,10 +23,16 @@ function draw() {
   ufo(x, y, d, r); // call the ufo() function (see below)
   
   // add code here to change the ship location each frame
-  
-  
-}
+  x += 1;
+  r += -.02;
+  y-=.5;
 
+  if(x > width)
+    x = 0;
+}
+if(y < 0){
+  y = height;
+}
 function ufo(tempX, tempY, tempD, tempR){
   // this custom function takes care of drawing a complex shape
   let r = tempR; // rotation value
